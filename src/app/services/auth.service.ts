@@ -21,6 +21,7 @@ export class AuthService {
         this.angularFireAuth.authState.subscribe((user) => {
             if (user) {
                 this.isUserLoggedIn = true;
+                this.router.navigate(['/clientes']);
                 this.authChange.next(true);
             } else {
                 this.authChange.next(false);

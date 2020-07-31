@@ -1,3 +1,6 @@
 <mat-toolbar color="primary">
-
+    Logo
+    <div fxFlex fxLayout fxLayoutAlign="flex-end" *ngIf="isAuthenticated">
+        <a mat-button (click)="logout()"> Salir </a>
+    </div>
 </mat-toolbar>

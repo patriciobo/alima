@@ -1,10 +1,9 @@
-<section class="margin-top">
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <mat-form-field>
+<div fxFlex>
+    <form fxLayout="column" fxLayoutAlign="center center" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="field">
             <input type="email" matInput placeholder="Email" formControlName="email" />
         </mat-form-field>
-
-        <mat-form-field>
+        <mat-form-field class="field">
             <input type="password" matInput placeholder="Contraseña" formControlName="password" />
         </mat-form-field>
 
@@ -14,4 +13,4 @@
 
         <mat-spinner *ngIf="isLoading"></mat-spinner>
     </form>
-</section>
+</div>

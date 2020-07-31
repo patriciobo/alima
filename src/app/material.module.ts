@@ -10,6 +10,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
     declarations: [],
@@ -24,6 +27,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
         MatSnackBarModule,
         MatProgressSpinnerModule,
         MatCheckboxModule,
+        MatSidenavModule,
+        MatTableModule,
+        MatSortModule,
     ],
     exports: [
         CommonModule,
@@ -36,6 +42,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
         MatSnackBarModule,
         MatProgressSpinnerModule,
         MatCheckboxModule,
+        MatSidenavModule,
+        MatTableModule,
+        MatSortModule,
     ],
     providers: [],
 })

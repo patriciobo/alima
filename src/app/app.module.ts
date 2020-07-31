@@ -10,17 +10,24 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AuthComponent } from './components/auth/auth.component';
+import { ClientesComponent } from './components/clientes/clientes.component';
 
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
+import { FormClientesComponent } from './components/clientes/form-clientes/form-clientes.component';
+import { AuthService } from './services/auth.service';
+import { UIService } from './services/ui.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     AuthComponent,
+    ClientesComponent,
+    FormClientesComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,8 +39,9 @@ import { environment } from 'src/environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    FlexLayoutModule
   ],
-  providers: [],
+  providers: [AuthService, UIService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
