@@ -1,8 +1,13 @@
-<div fxFlex fxLayout="column" fxLayoutAlign="space-around center">
-    <h1 fxFlex="60">Clientes</h1>
-    <mat-form-field>
-        <input type="text" matInput placeholder="Filtrar" (keyup)="filtrar($event.target.value)" />
-    </mat-form-field>
+<div fxFlex="60" fxFlexOffset="20" fxLayout="column" fxLayoutAlign="space-around center" class="container">
+    <div fxLayout class="fila">
+        <h1 fxFlex="35">Clientes</h1>
+        <mat-form-field fxFlex="30">
+            <input type="text" matInput placeholder="Filtrar" (keyup)="filtrar($event.target.value)" />
+        </mat-form-field>
+        <button fxFlexOffset="25" mat-flat-button color="accent" type="button" class="boton">
+            + Agregar
+        </button>
+    </div>
     <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
         <ng-container matColumnDef="nombre">
