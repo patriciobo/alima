@@ -13,6 +13,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
+import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @NgModule({
     declarations: [],
@@ -30,6 +31,7 @@ import { MatSortModule } from '@angular/material/sort';
         MatSidenavModule,
         MatTableModule,
         MatSortModule,
+        MatDialogModule
     ],
     exports: [
         CommonModule,
@@ -45,7 +47,11 @@ import { MatSortModule } from '@angular/material/sort';
         MatSidenavModule,
         MatTableModule,
         MatSortModule,
+        MatDialogModule
     ],
-    providers: [],
+    providers: [
+        { provide: MAT_DIALOG_DATA, useValue: {} },
+        { provide: MatDialogRef, useValue: {} }
+    ]
 })
 export class MaterialModule { }

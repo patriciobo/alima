@@ -1,0 +1,20 @@
+  .fullWidth {
+    width: 100%;
+  }
+  
+  .formWidth {
+    max-width: 540px;
+  }
+  
+  .buttonMargin {
+    margin-right: 10px;
+  }
+
+  .formulario {
+    padding: 30px;
+  }
+  
+  mat-dialog-actions {
+    justify-content: flex-end;
+  }
+  

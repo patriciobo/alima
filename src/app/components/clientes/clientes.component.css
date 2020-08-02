@@ -13,3 +13,7 @@ table {
 .boton {
     height: 40px;
 }
+
+.mat-dialog-container {
+    padding: 0px !important;
+}

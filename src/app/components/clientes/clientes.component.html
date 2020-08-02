@@ -4,7 +4,7 @@
         <mat-form-field fxFlex="30">
             <input type="text" matInput placeholder="Filtrar" (keyup)="filtrar($event.target.value)" />
         </mat-form-field>
-        <button fxFlexOffset="25" mat-flat-button color="accent" type="button" class="boton">
+        <button fxFlexOffset="25" mat-flat-button color="accent" type="button" (click)="agregarCliente()" class="boton">
             + Agregar
         </button>
     </div>

@@ -1,1 +1,29 @@
-<p>form-clientes works!</p>
+<form [formGroup]="formCliente" fxFlex fxLayout="column" class="formWidth">
+    <div *ngIf="!modoEdicion">
+        <mat-toolbar color="primary">Registrar reserva</mat-toolbar>
+    </div>
+    <div *ngIf="modoEdicion">
+        <mat-toolbar color="accent">Editar reserva</mat-toolbar>
+    </div>
+    <div fxFlex fxLayoutGap="10px" class="formulario">
+        <mat-form-field appearance="standard" class="fullWidth">
+            <mat-label>
+                Apellido y Nombre
+            </mat-label>
+            <input matInput formControlName="NombreYApellido" />
+            <mat-error>Requerido</mat-error>
+        </mat-form-field>
+        <br />
+        <div class="fullWidth">
+            <mat-dialog-actions fxFlexAlign="end">
+                <button class="mat-stroked-button mat-accent buttonMargin" (click)="cancelar()">
+                    Cancelar
+                </button>
+
+                <button class="mat-raised-button mat-primary" (click)="guardarCliente()">
+                    Guardar
+                </button>
+            </mat-dialog-actions>
+        </div>
+    </div>
+</form>
