@@ -1,9 +1,9 @@
 <form [formGroup]="formCliente" fxFlex fxLayout="column" class="formWidth">
     <div *ngIf="!modoEdicion">
-        <mat-toolbar color="primary">Registrar reserva</mat-toolbar>
+        <mat-toolbar color="primary">Registrar cliente</mat-toolbar>
     </div>
     <div *ngIf="modoEdicion">
-        <mat-toolbar color="accent">Editar reserva</mat-toolbar>
+        <mat-toolbar color="accent">Editar cliente</mat-toolbar>
     </div>
     <div fxFlex fxLayoutGap="10px" class="formulario">
         <mat-form-field appearance="standard" class="fullWidth">
