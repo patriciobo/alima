@@ -14,6 +14,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
     declarations: [],
@@ -31,7 +33,9 @@ import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/materia
         MatSidenavModule,
         MatTableModule,
         MatSortModule,
-        MatDialogModule
+        MatDialogModule,
+        MatIconModule,
+        MatListModule,
     ],
     exports: [
         CommonModule,
@@ -47,7 +51,10 @@ import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/materia
         MatSidenavModule,
         MatTableModule,
         MatSortModule,
-        MatDialogModule
+        MatDialogModule,
+        MatIconModule,
+        MatListModule,
+
     ],
     providers: [
         { provide: MAT_DIALOG_DATA, useValue: {} },
