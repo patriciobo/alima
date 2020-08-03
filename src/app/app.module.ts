@@ -20,6 +20,13 @@ import { environment } from '../environments/environment';
 import { FormClientesComponent } from './components/clientes/form-clientes/form-clientes.component';
 import { AuthService } from './services/auth.service';
 import { UIService } from './services/ui.service';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +35,8 @@ import { UIService } from './services/ui.service';
     AuthComponent,
     ClientesComponent,
     FormClientesComponent,
+    NavComponent
+ 
   ],
   imports: [
     BrowserModule,
@@ -39,7 +48,13 @@ import { UIService } from './services/ui.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [AuthService, UIService],
   bootstrap: [AppComponent]
