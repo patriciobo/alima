@@ -1,6 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-toolbar',
@@ -12,6 +13,7 @@ import { AuthService } from '../../services/auth.service';
 export class ToolbarComponent implements OnInit, OnDestroy {
   isAuthenticated: boolean;
   authSubscription: Subscription;
+  
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
@@ -19,7 +21,7 @@ export class ToolbarComponent implements OnInit, OnDestroy {
       (authStatus) => (this.isAuthenticated = authStatus)
     );
   }
-
+ 
   logout() {
     this.authService.logout();
   }
@@ -29,4 +31,5 @@ export class ToolbarComponent implements OnInit, OnDestroy {
       this.authSubscription.unsubscribe();
     }
   }
+
 }
