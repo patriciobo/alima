@@ -11,7 +11,6 @@ const datos: Cliente[] = [
   { nombre: 'Gabriel Gallinoti', dni: 40879418, fechaNacimiento: new Date('04/05/1990'), telefono: 3517894561, estado: 'Inactivo' },
   { nombre: 'Patricio Gallinoti', dni: 40879418, fechaNacimiento: new Date('05/06/1996'), telefono: 3517894561, estado: 'Moroso' },
 ];
-
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
